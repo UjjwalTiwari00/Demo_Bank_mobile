@@ -3,6 +3,7 @@ import React from "react";
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
 
+
 export default function Device_binding() {
   const navigation = useNavigation();
   return (
@@ -32,7 +33,7 @@ export default function Device_binding() {
       <View className="items-center m-2">
         <TouchableOpacity
           className="w-full p-3 items-center text-white rounded-lg bg-blue-900"
-          onPress={() => navigation.navigate('mpin_tpin')}
+          onPress={() => navigation.navigate('mpin')}
         >
           <Text className="text-base text-white">Verify my device with default SIM</Text>
         </TouchableOpacity>

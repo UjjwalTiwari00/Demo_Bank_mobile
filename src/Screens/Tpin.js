@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
-export default function SetPassword() {
+
+
+export default function Tpin() {
   const [currentPassword, setCurrentPassword] = useState(["", "", "", ""]);
   const [newPassword, setNewPassword] = useState(["", "", "", ""]);
   const [confirmPassword, setConfirmPassword] = useState(["", "", "", ""]);
 
+
   const inputRefs = [[], [], []]; // For referencing the TextInputs for all three password fields
+
 
   const handlePinChange = (index, value, setter, passwordArray) => {
     if (value.length <= 1) {
@@ -28,7 +31,7 @@ export default function SetPassword() {
   return (
     <View className="flex-1 bg-gray-100">
       <View className="bg-white p-4 shadow">
-        <Text className="text-2xl font-bold text-gray-900">Set Password</Text>
+        <Text className="text-2xl font-bold text-gray-900">Set T-PIN</Text>
       </View>
       <View className="flex-grow justify-center items-center px-4">
         <View className="bg-white rounded-lg p-6 shadow w-full max-w-xs">
@@ -112,7 +115,7 @@ export default function SetPassword() {
           </View>
 
           <TouchableOpacity className="bg-indigo-600 p-2 rounded-md">
-            <Text className="text-white text-base text-center">Confirm</Text>
+            <Text className="text-white text-base text-center" onPress={() => navigation.navigate('login_page')}>Confirm</Text>
           </TouchableOpacity>
         </View>
       </View>
